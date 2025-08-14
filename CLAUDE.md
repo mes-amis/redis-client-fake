@@ -55,9 +55,17 @@ The gem provides a fully functional in-memory Redis driver registered as `:fake`
 
 ### Supported Redis Commands
 - **Connection**: PING, HELLO
-- **Key operations**: GET, SET (with expiration options), EXISTS, DEL, KEYS, TTL, EXPIRE, EXPIREAT
+- **String operations**: GET, SET (with expiration options), INCR, INCRBY, MGET, MSET
+- **Key operations**: EXISTS, DEL, UNLINK, EXPIRE, EXPIREAT, TTL, PTTL, TYPE, KEYS
+- **Hash operations**: HGET, HSET, HSETNX, HGETALL, HDEL, HINCRBY, HLEN, HMGET
+- **List operations**: LPUSH, RPUSH, LPOP, RPOP, LLEN, LINDEX, LRANGE, LREM, LMOVE
+- **Set operations**: SADD, SREM, SCARD, SISMEMBER, SMEMBERS
+- **Sorted set operations**: ZADD, ZREM, ZCARD, ZINCRBY, ZRANGE, ZREMRANGEBYRANK, ZREMRANGEBYSCORE
 - **Database**: FLUSHALL, FLUSHDB, DBSIZE
-- **Advanced features**: Pipelined operations, transactions via MULTI/EXEC
+- **Pub/Sub**: PUBLISH (basic support, returns 0 subscribers)
+- **Scripting**: SCRIPT LOAD, SCRIPT EXISTS (basic support)
+- **Bitfield**: BITFIELD, BITFIELD_RO (simplified implementation)
+- **Advanced features**: Pipelined operations, transactions via MULTI/EXEC, expiration handling
 
 ### Architecture
 - **Thread-safe storage**: `Redis::Client::Fake::Storage` with mutex-based synchronization
