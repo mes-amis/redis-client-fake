@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "redis/client/in/memory"
+require "redis/client/fake"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

@@ -2,10 +2,8 @@
 
 module Redis
   module Client
-    module In
-      module Memory
-        VERSION = "0.1.0"
-      end
+    module Fake
+      VERSION = "0.1.0"
     end
   end
 end

@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "lib/redis/client/in/memory/version"
+require_relative "lib/redis/client/fake/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "redis-client-in-memory"
-  spec.version = Redis::Client::In::Memory::VERSION
+  spec.name = "redis-client-fake"
+  spec.version = Redis::Client::Fake::VERSION
   spec.authors = ["Craig McNamara"]
   spec.email = ["craig@monami.io"]
 
