@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "redis_client"
 require "redis/client/fake"
 
 RSpec.configure do |config|

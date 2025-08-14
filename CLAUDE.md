@@ -51,4 +51,35 @@ The gem follows Ruby gem conventions with nested modules:
 - Uses Bundler for dependency management
 
 ## Current State
-The gem is a skeleton with basic structure but no actual Redis client implementation yet. The main module contains only a placeholder comment "Your code goes here...". The module has been renamed to `Redis::Client::Fake` throughout the codebase.
+The gem provides a fully functional in-memory Redis driver registered as `:fake` with redis-client. It implements:
+
+### Supported Redis Commands
+- **Connection**: PING, HELLO
+- **Key operations**: GET, SET (with expiration options), EXISTS, DEL, KEYS, TTL, EXPIRE, EXPIREAT
+- **Database**: FLUSHALL, FLUSHDB, DBSIZE
+- **Advanced features**: Pipelined operations, transactions via MULTI/EXEC
+
+### Architecture
+- **Thread-safe storage**: `Redis::Client::Fake::Storage` with mutex-based synchronization
+- **Driver implementation**: `Redis::Client::Fake::Connection` that implements redis-client's connection protocol
+- **Automatic registration**: Driver registers as `:fake` when redis-client is available
+- **Shared storage**: Multiple connections share the same in-memory data store
+- **Full compatibility**: Works with all redis-client features including pipelining
+
+### Usage
+```ruby
+require 'redis/client/fake'
+
+# Create client with fake driver
+client = RedisClient.config(driver: :fake).new_client
+
+# Use like any Redis client
+client.call("SET", "key", "value")
+client.call("GET", "key") # => "value"
+
+# Supports pipelining
+results = client.pipelined do |pipe|
+  pipe.call("SET", "key1", "value1")
+  pipe.call("GET", "key1")
+end
+```
