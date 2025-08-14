@@ -10,13 +10,13 @@ Gem::Specification.new do |spec|
 
   spec.summary = "An in-memory backend for redis-client, similar to Fakeredis"
   spec.description = "Provides a fake Redis driver for redis-client that stores data in-memory for testing purposes"
-  spec.homepage = "https://github.com/craigmcnamara/redis-client-fake"
+  spec.homepage = "https://github.com/mes-amis/redis-client-fake"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/craigmcnamara/redis-client-fake"
-  spec.metadata["changelog_uri"] = "https://github.com/craigmcnamara/redis-client-fake/blob/main/CHANGELOG.md"
+  spec.metadata["source_code_uri"] = "https://github.com/mes-amis/redis-client-fake"
+  spec.metadata["changelog_uri"] = "https://github.com/mes-amis/redis-client-fake/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

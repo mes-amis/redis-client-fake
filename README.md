@@ -1,6 +1,8 @@
 # Redis::Client::Fake
 
-An in-memory backend for [doc/redis-client](https://github.com/redis-rb/redis-client) similar to Fakeredis
+[![Ruby](https://github.com/mes-amis/redis-client-fake/actions/workflows/main.yml/badge.svg)](https://github.com/mes-amis/redis-client-fake/actions/workflows/main.yml)
+
+An in-memory backend for [redis-client](https://github.com/redis-rb/redis-client) similar to Fakeredis
 
 ## Usage
 
@@ -14,7 +16,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/craigmcnamara/redis-client-fake. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/craigmcnamara/redis-client-fake/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/mes-amis/redis-client-fake. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/mes-amis/redis-client-fake/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -22,4 +24,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Redis::Client::Fake project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/craigmcnamara/redis-client-fake/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the Redis::Client::Fake project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/mes-amis/redis-client-fake/blob/main/CODE_OF_CONDUCT.md).
